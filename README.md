@@ -8,9 +8,9 @@ Literatuur
 
 Uit het boek van James, Witten, Hastie en Tibshirani (2013) kunnen hoofdstuk 8 (tree-based methods) en sectie 5.1 (resampling methods - cross validation) behulpzaam zijn.
 
-De referentielijst geeft noder meer verwijzingen voor de algoritmes geimplementeerd in functie `ctree()` (Hothorn, Hornik & Zeileis, 2006), functies `lmtree` en `glmtree` (Zeileis, Hornik & Hothorn, 2008), functies `lmertree()` en `glmertree()` (Fokkema et al, 2018) en functie `randomForest()` (Breiman, 2001). Daar moet je hoe dan ook naar verwijzen als je de algoritmes gebruikt in je scriptie. Het is aan te raden om de publicaties ook te bestuderen, maar als ze je boven de pet gaan is dat op zich geen probleem.
+De referentielijst geeft onder meer verwijzingen voor de algoritmes geimplementeerd in functie `ctree()` (Hothorn, Hornik & Zeileis, 2006), functies `lmtree` en `glmtree` (Zeileis, Hornik & Hothorn, 2008), functies `lmertree()` en `glmertree()` (Fokkema et al, 2018) en functie `randomForest()` (Breiman, 2001). Daar moet je hoe dan ook naar verwijzen als je de algoritmes gebruikt in je scriptie. Het is aan te raden om de publicaties ook te bestuderen, maar als ze je boven de pet gaan is dat op zich geen probleem.
 
-Wanneer je **R** en specifieke **R** packages gebruikt, is het belangrijk om correct te verwijzen. Al deze software wordt je gratis aangeboden en je kunt iets teruggeven aan de ontwikkelaars door hun werk (correct) te citeren. Om de juiste citatie voor **R** en packages te verkrijgen, gebruik je in **R** de `citation()` functie. Voor APA formatering hoef je alleen nog zelf cursief (van journal- of boektitel) toevoegt.
+Wanneer je **R** en specifieke **R** packages gebruikt, is het belangrijk om correct te verwijzen. Al deze software wordt je gratis aangeboden en je kunt iets teruggeven aan de ontwikkelaars door hun werk (correct) te citeren. Om de juiste citatie voor **R** en packages te verkrijgen, gebruik je in **R** de `citation()` functie. Voor APA formatering hoef je alleen nog zelf cursief (van journal- of boektitel) toevoegt. Bijvoorbeeld:
 
 ``` r
 citation()
