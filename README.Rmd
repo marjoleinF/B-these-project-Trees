@@ -27,9 +27,9 @@ citation("partykit")
 
 Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5-32.
 
-Hothorn, T., Hornik, K., & Zeileis, A. (2006). Unbiased recursive partitioning: A conditional inference framework. *Journal of Computational and Graphical statistics, 15*(3), 651-674.
+Hothorn, T., Hornik, K., & Zeileis, A. (2006). Unbiased recursive partitioning: A conditional inference framework. *Journal of Computational and Graphical Statistics, 15*(3), 651-674.
 
-Fokkema, M., Smits, N., Zeileis, A., Hothorn, T., & Kelderman, H. (2018). Detecting treatment-subgroup interactions in clustered data with generalized linear mixed-effects model trees.* Behavior Research Methods, 50*(5), 2016-2034.
+Fokkema, M., Smits, N., Zeileis, A., Hothorn, T., & Kelderman, H. (2018). Detecting treatment-subgroup interactions in clustered data with generalized linear mixed-effects model trees. *Behavior Research Methods, 50*(5), 2016-2034.
 
 James, G., Witten, D., Hastie, T., Tisbshirani, R. (2013). *An introduction to statistical learning.* Springer Verlag, New York, NY.
 
