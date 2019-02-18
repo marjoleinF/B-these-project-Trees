@@ -14,7 +14,7 @@ plot(dep_data)
 sapply(dep_data, class)
 # Correctly set class of variable:
 dep_data$sexo <- factor(dep_data$sexo)
-
+dep_data$sexo
 
 
 ##
@@ -69,10 +69,11 @@ text(gen_cart)
 predict(dep_lm, newdata = dep_data)
 predict(dep_ctree, newdata = dep_data)
 predict(dep_cart, newdata = dep_data)
-predict(gen_glm, newdata = dep_data)
+predict(gen_glm, newdata = dep_data, type = "response")
 predict(gen_ctree, newdata = dep_data)
-predict(gen_ctree, newdata = dep_data, type = "prob")
+predict(gen_ctree, newdata = dep_data, type = "prob")[,2]
 predict(gen_cart, newdata = dep_data)
+
 
 # generate k folds for CV:
 k <- 10

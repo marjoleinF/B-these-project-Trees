@@ -3,8 +3,13 @@ Bachelorthese project 2018-2019: Beslisbomen
 
 Op deze repository vind je de up-to-date materialen voor het bachelorthese-project.
 
-Literatuur
-==========
+Tip voor data zoeken: PLOS ONE
+------------------------------
+
+Een peer-reviewed journal waarin veel auteurs de data voor hun studie beschikbaar maken als 'supplementary material', of een link geven naar een website met data is PLOS ONE <https://journals.plos.org/plosone/>. Om specifiek in publicaties uit PLOS ONE te zoeken op Google Scholar, ga naar <https://scholar.google.nl/>, klik op het icoon met drie strepen linksbovenin de pagina en dan op 'Geavanceerd zoeken'. Je kunt PLOS ONE dan invoeren onder 'Artikelen weergeven die zijn gepubliceerd in' en zoektermen gebruiken zoals je normaal zou doen.
+
+Relevante literatuur
+--------------------
 
 Uit het boek van James, Witten, Hastie en Tibshirani (2013) kunnen hoofdstuk 8 (tree-based methods) en sectie 5.1 (resampling methods - cross validation) behulpzaam zijn. Je kunt het boek gratis downloaden van <https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf>.
 
