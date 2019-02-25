@@ -170,13 +170,13 @@ head(DepressionDemo)
 
 # fit linear model tree
 lt <- lmtree(depression ~ treatment | age + anxiety + duration,
-               data = DepressionDemo)
+             data = DepressionDemo)
 print(lt)
 plot(lt)
 
 # fit linear mixed-effects model tree:
 lmert <- lmertree(depression ~ treatment | cluster | age + anxiety + duration,
-                data = DepressionDemo)
+                  data = DepressionDemo)
 print(lmert)
 plot(lmert)
 head(predict(lmert, newdata = DepressionDemo))
