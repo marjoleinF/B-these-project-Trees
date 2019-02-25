@@ -15,9 +15,9 @@ dep_data <- read.spss("data Carrillo et al.sav", to.data.frame = TRUE)
 
 # Inleiding (Introduction)
 
-Aan het eidne van de Inleiding (Introduction) sectie moet je de hypothesen die je in je onderzoek gaat toetsen vermelden. Een van de mogelijke hypothesen die we kunnen toetsen met de voorbeelddata van vorige week is als volgt: 
+Aan het einde van de Inleiding (Introduction) sectie moet je de hypothesen die je in je onderzoek gaat toetsen beschrijven. Een mogelijke hypothese die we kunnen toetsen met de voorbeelddata van vorige week is als volgt: 
 
-Beslisboommethoden geven een betere predictie dan lineaire regressie bij het voorspellen van depressiescores op basis van persoonlijkheidsschalen.  
+Beslisboommethoden geven een kleinere predictiefouten dan lineaire regressie bij het voorspellen van depressiescores op basis van persoonlijkheidsschalen.  
 
 In de resultaten sectie toets je deze hypothese. Hieronder een voorbeeld. De R code is weergegeven, zodat je ziet waar de gerapporteede resultaten vandaan komen, maar die moet je natuurlijk weglaten uit je eigen Resultatensectie.
 

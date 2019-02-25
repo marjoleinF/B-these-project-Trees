@@ -10,9 +10,9 @@ dep_data <- read.spss("data Carrillo et al.sav", to.data.frame = TRUE)
 Inleiding (Introduction)
 ========================
 
-Aan het eidne van de Inleiding (Introduction) sectie moet je de hypothesen die je in je onderzoek gaat toetsen vermelden. Een van de mogelijke hypothesen die we kunnen toetsen met de voorbeelddata van vorige week is als volgt:
+Aan het einde van de Inleiding (Introduction) sectie moet je de hypothesen die je in je onderzoek gaat toetsen beschrijven. Een mogelijke hypothese die we kunnen toetsen met de voorbeelddata van vorige week is als volgt:
 
-Beslisboommethoden geven een betere predictie dan lineaire regressie bij het voorspellen van depressiescores op basis van persoonlijkheidsschalen.
+Beslisboommethoden geven een kleinere predictiefouten dan lineaire regressie bij het voorspellen van depressiescores op basis van persoonlijkheidsschalen.
 
 In de resultaten sectie toets je deze hypothese. Hieronder een voorbeeld. De R code is weergegeven, zodat je ziet waar de gerapporteede resultaten vandaan komen, maar die moet je natuurlijk weglaten uit je eigen Resultatensectie.
 
@@ -69,7 +69,7 @@ apply(errors^2, MARGIN = 2, FUN = sd) / sqrt(nrow(errors))
 boxplot(errors, names = c("Lineaire regressie", "Beslisboom: ctree", "Beslisboom: rpart"))
 ```
 
-![Figuur 1. Boxplots van predictiefouten per methode.](R_script_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![Figuur 1. Boxplots van predictiefouten per methode.](Hypothese_voorbeeld_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 In Figuur 1 (let op dat geen APA formattering is gebruikt in Figuur 1, dat moet je in je scriptie wel doen) zijn de predictiefouten voor de methoden weergegeven. De MSE was 53.05 (SE = 11.13) voor lineaire regressie, 48.80 (SE = 8.31) voor de ctree en 40.80 (SE = 7.00) voor de rpart methode. De verschillen tussen de MSEs lijken klein, in vergelijking met de standard errors. Een one-way ANOVA liet geen significante verschillen in mean squared errors (MSEs) tussen de methoden zien: *F*(2, 333) = 0.480; *p* = .619. Een tweede one-way ANOVA liet geen significante verschillen tussen de mean absolute errors (MAEs) tussen de methoden zien: *F*(2, 333) = 0.358; p = .700. Er werd dus geen ondersteuning voor de hypothese gevonden.
 
