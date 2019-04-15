@@ -9,6 +9,19 @@ csl: inst/bib_style.csl
 
 Op deze repository vind je de up-to-date materialen voor het bachelorthese-project.
 
+## Aankomende deadlines
+
+* Maandag 29 april: Inleveren 1e versie Resultaten en Discussie
+
+* Vrijdag 3 mei: Feedback 1e versie Resultaten en Discussie
+
+* Maandag 13 mei: Inleveren 2e versie Resultaten en Discussie
+
+* Maandag 20 mei: Feedback 2e versie Resultaten en Discussie
+
+* Zondag 2 juni: Inleveren complete bachelorthese (digitaal; op papier kan t/m dinsdag 4 juni)
+
+
 
 ## Tip voor data zoeken: PLOS ONE
 

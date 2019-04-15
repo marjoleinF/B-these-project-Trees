@@ -22,6 +22,18 @@ In de resultaten sectie toets je deze hypothese. Hieronder een voorbeeld. De R c
 Resultaten (Results)
 --------------------
 
+De Resultaten sectie bevat:
+
+-   *Beschrijvende statistieken*. Denk b.v. aan: Een tabel waarin de gemiddelden en standaarddeviaties van de predictieve accuratesse voor elk van de methoden vermeld staan.
+
+-   *Grafische weergave* van de resultaten. B.v. een figuur waarin je de verdeling van de predictiefouten van de verschillende methoden laat zien m.b.v. boxplots.
+
+-   *Toetsingsresultaten*. Gebruik statistische toetsen om te bepalen of de verschillen tussen de uitkomsten (predictieve accuratesse, complexiteit) van de methoden significant zijn.
+
+Zorg dat je naar iedere tabel en figuur die je opneemt in de tekst verwijst, zodat het duidelijk is welke conclusies getrokken kunnen worden op basis van de tabellen en figuren.
+
+Een hele korte voorbeeldresultatensectie volgt hieronder:
+
 ``` r
 # load packages:
 library("partykit")
@@ -94,3 +106,18 @@ summary(abs_errors_aov)
     ##              Df Sum Sq Mean Sq F value Pr(>F)
     ## ind           2     16   7.986   0.358    0.7
     ## Residuals   333   7436  22.329
+
+Discussie (Discussion)
+----------------------
+
+De Discussie sectie bevat:
+
+-   Een korte *samenvatting* van de resultaten. Vat de resultaten samen in enkele zinnen / in een paragraaf. Zorg dat je een heldere conclusie geeft voor elk van de hypothesen of onderzoeksvragen die je aan het einde van de Introductie hebt geformuleerd. Als je in je onderzoek naar zowel de statistische methodologie hebt gekeken (b.v. predictieve accuratesse van twee methoden vergelijken), als naar de een inhoudelijk onderzoeksvraag (b.v. wat zijn de predictoren van asociaal rijgedrag), kun je aan elk een paragraaf wijden. Als je een complex onderzoeksdesign had en de resultaten niet in enkele zinnen uit te leggen zijn (er was bijvoorbeeld sprake van interactie-effecten), dan kun je natuurlijk ook meer ruimte voor de samenvattin gebruiken.
+
+-   *Integratie* van de resultaten die jij vond met de resultaten uit ander onderzoek. B.v. 'Net als in de studie van Pietje en Klaasje (2000) vonden we een hogere predictieve accuratesse van regressiebomen, in vergelijking met lineaire regressie.'
+
+-   *Sterke en zwakke kanten* van je onderzoek. Streef naar 1-3 belangrijkste sterke en zwakke punten en leg uit wat de gevolgen daarvan kunnen zijn voor de interpretatie van de resultaten. Kritisch zijn is goed, maar overdrijf het niet door je hele onderzoek af te branden.
+
+-   *Aanbevelingen* voor vervolgonderzoek.
+
+In Discussie moet haast geen nieuwe informatie aan bod komen. Het gaat om samenvatten, interpreteren en integreren van de resultaten. Alle resultaten die besproken worden in de Discussie, moeten in de Resultatensectie al zijn besproken. Literatuur die in de Discussie word besproken, moet in de Inleiding of Methode al eerder besproken zijn. Alleen wanneer je, bijvoorbeeld, zeer onverwachte resultaten in je studie tegen kwam, die toch goed te interpreteren zijn in de context van literatuur of onderzoeken die je nog niet eerder hebt genoemd, kun je naar die literatuur of onderzoeken verwijzen.

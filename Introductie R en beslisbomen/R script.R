@@ -5,6 +5,7 @@
 library("foreign")
 dep_data <- read.spss("data Carrillo et al.sav", to.data.frame = TRUE)
 
+
 ## Inspect data:
 head(dep_data)
 dim(dep_data)
@@ -15,6 +16,8 @@ sapply(dep_data, class)
 # Correctly set class of variable:
 dep_data$sexo <- factor(dep_data$sexo)
 dep_data$sexo
+
+
 
 
 ##
@@ -62,7 +65,23 @@ text(gen_cart)
 
 
 ##
-## Generate predictions and perform cross validation
+## Fit a random forest
+## 
+
+library("randomForest")
+set.seed(42)
+dep_forest <- randomForest(bdi ~ ., importance = TRUE, data = dep_data)
+varImpPlot(dep_forest)
+importance(dep_forest)
+partialPlot(dep_forest, pred.data = dep_data, x.var = "n3")
+partialPlot(dep_forest, pred.data = dep_data, x.var = "open4")
+
+
+
+
+
+##
+## Generate predictions from fitted models
 ##
 
 # Use of predict function:
@@ -73,7 +92,15 @@ predict(gen_glm, newdata = dep_data, type = "response")
 predict(gen_ctree, newdata = dep_data)
 predict(gen_ctree, newdata = dep_data, type = "prob")[,2]
 predict(gen_cart, newdata = dep_data)
+predict(dep_forest, newdata = dep_data)
 
+
+
+
+
+##
+## Assess predictive accuracy through 10-fold cross validation
+##
 
 # generate k folds for CV:
 k <- 10
@@ -87,6 +114,7 @@ dim(dep_data[fold_ids == 1, ]) # test data for fold 1
 dim(dep_data[fold_ids != 9, ]) # training data for fold 9
 dim(dep_data[fold_ids == 9, ]) # test data for fold 9
 
+
 # perform CV:
 lmods <- ctrees <- list() # for saving fitted models (optional, for later use)
 cv_preds <- data.frame(matrix(NA, nrow = nrow(dep_data), ncol = 3))
@@ -94,10 +122,15 @@ names(cv_preds) <- c("lm", "ctree", "rpart")
 
 for (i in 1:k) {
   
+  # Print progress:
+  print(paste("fold", i ,"of", k))
+  
   # Fit models: 
   lmods[[i]] <- lm(bdi ~ ., data = dep_data[fold_ids != i, ])
   ctrees[[i]] <- ctree(bdi ~ ., data = dep_data[fold_ids != i, ])
   cart <- rpart(bdi ~ ., data = dep_data[fold_ids != i, ])
+  rf <- randomForest(bdi ~ ., importance = TRUE, 
+                     data = dep_data[fold_ids != i, ])
   
   # get predictions:
   cv_preds$lm[fold_ids == i] <- predict(lmods[[i]], 
@@ -106,7 +139,12 @@ for (i in 1:k) {
                                            newdata = dep_data[fold_ids == i,])
   cv_preds$rpart[fold_ids == i] <-predict(cart, 
                                           newdata = dep_data[fold_ids == i,])
+  cv_preds$rf[fold_ids == i] <- predict(rf, newdata = dep_data[fold_ids == i,])
 }
+
+# Check whether results look as expected:
+head(cv_preds)
+tail(cv_preds)
 
 # save results:
 save(cv_preds, file = "cv_preds")
@@ -118,7 +156,7 @@ load("cv_preds")
 ## Evaluate results
 ##
 
-# Assess mean squared error:
+# Assess squared errors:
 errors <- cv_preds - dep_data$bdi
 boxplot(errors)
 colMeans(errors^2)
@@ -129,10 +167,12 @@ apply(errors^2, MARGIN = 2, FUN = sd) / sqrt(nrow(errors))
 # Perform anova to test significance of differences:
 errors_aov_dat <- stack(errors)
 head(errors_aov_dat)
+tail(errors_aov_dat)
 errors_aov <- aov(values^2 ~ ind, data = errors_aov_dat)
 summary(errors_aov)
 TukeyHSD(errors_aov)
 # as already suspected, no significant difference between methods
+
 
 
 

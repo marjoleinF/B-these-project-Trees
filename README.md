@@ -3,6 +3,19 @@ Bachelorthese project 2018-2019: Beslisbomen
 
 Op deze repository vind je de up-to-date materialen voor het bachelorthese-project.
 
+Aankomende deadlines
+--------------------
+
+-   Maandag 29 april: Inleveren 1e versie Resultaten en Discussie
+
+-   Vrijdag 3 mei: Feedback 1e versie Resultaten en Discussie
+
+-   Maandag 13 mei: Inleveren 2e versie Resultaten en Discussie
+
+-   Maandag 20 mei: Feedback 2e versie Resultaten en Discussie
+
+-   Zondag 2 juni: Inleveren complete bachelorthese (digitaal; op papier kan t/m dinsdag 4 juni)
+
 Tip voor data zoeken: PLOS ONE
 ------------------------------
 
@@ -24,7 +37,7 @@ citation()
     ## 
     ## To cite R in publications use:
     ## 
-    ##   R Core Team (2017). R: A language and environment for
+    ##   R Core Team (2019). R: A language and environment for
     ##   statistical computing. R Foundation for Statistical Computing,
     ##   Vienna, Austria. URL https://www.R-project.org/.
     ## 
@@ -35,7 +48,7 @@ citation()
     ##     author = {{R Core Team}},
     ##     organization = {R Foundation for Statistical Computing},
     ##     address = {Vienna, Austria},
-    ##     year = {2017},
+    ##     year = {2019},
     ##     url = {https://www.R-project.org/},
     ##   }
     ## 
@@ -60,13 +73,14 @@ citation("partykit")
     ##   Torsten Hothorn, Kurt Hornik and Achim Zeileis (2006). Unbiased
     ##   Recursive Partitioning: A Conditional Inference Framework.
     ##   Journal of Computational and Graphical Statistics, 15(3),
-    ##   651--674.
+    ##   651--674, DOI: 10.1198/106186006X133933
     ## 
     ## If mob() is used additionally cite:
     ## 
     ##   Achim Zeileis, Torsten Hothorn and Kurt Hornik (2008).
     ##   Model-Based Recursive Partitioning. Journal of Computational and
-    ##   Graphical Statistics, 17(2), 492--514.
+    ##   Graphical Statistics, 17(2), 492--514, DOI:
+    ##   10.1198/106186008X319331
     ## 
     ## To see these entries in BibTeX format, use 'print(<citation>,
     ## bibtex=TRUE)', 'toBibtex(.)', or set
